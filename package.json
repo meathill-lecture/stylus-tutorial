@@ -1,0 +1,44 @@
+{
+  "name": "stylus-tutorial",
+  "version": "0.1.0",
+  "description": "a full tutorial of stylus",
+  "scripts": {
+    "start": "live-server --port=8001 --host=localhost --ignore=.git,node_modules",
+    "watch:stylus": "mkdir css & stylus -m -w styl/screen.styl -o css/",
+    "webpack": "webpack"
+  },
+  "author": {
+    "name": "Meathill",
+    "email": "meathill@gmail.com",
+    "url": "https://meathill.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meathill-lecture/stylus-tutorial.git"
+  },
+  "homepage": "https://meathill-lecture.github.io/",
+  "license": "(CC-BY-NC-ND-4.0 OR MIT)",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "marked": "^0.3.6",
+    "reveal-markdown-compiler": "^1.2.0",
+    "run-sequence": "^1.2.2",
+    "webpack": "^3.3.0",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "highlight.js": "^9.12.0",
+    "meathill-reveal-theme": "^0.2.2",
+    "reveal.js": "^3.5.0"
+  }
+}
