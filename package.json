@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "a full tutorial of stylus",
   "scripts": {
-    "start": "live-server --port=8001 --host=localhost --ignore=.git,node_modules",
+    "start": "node live-server.js",
     "watch:stylus": "mkdir css & stylus -m -w styl/screen.styl -o css/",
     "webpack": "webpack"
   },
@@ -29,6 +29,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
+    "live-server": "^1.2.0",
     "marked": "^0.3.6",
     "reveal-markdown-compiler": "^1.2.0",
     "run-sequence": "^1.2.2",
@@ -36,9 +37,11 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "highlight.js": "^9.12.0",
     "meathill-reveal-theme": "^0.2.2",
-    "reveal.js": "^3.5.0"
+    "reveal.js": "^3.5.0",
+    "spinkit": "^1.2.5"
   }
 }
