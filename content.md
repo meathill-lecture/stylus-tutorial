@@ -438,13 +438,55 @@ form input[type=button] {
 
 ### 颜色函数
 
+```stylus
+.btn-primary
+  background-color $primary-color
+  border-color darken($primary-color, 15%)
+
+.link
+  color red
+
+  &:hover
+    color lighten(red, 10%)
+```
+
+[以及其它....](http://stylus-lang.com/docs/bifs.html)
+
 <!-- section -->
 
 ### 嵌入图片
 
+```stylus
+background: embedurl('logo.png')
+// => background: url("data:image/png;base64,…")
+
+background: embedurl('logo.svg', 'utf8')
+// => background: url("data:image/svg+xml;charset=utf-8,…")
+```
+
 <!-- section -->
 
 ### 添加前缀
+
+```stylus
++prefix-classes('.tqb-dp-')
+  .header
+    height 2.5rem
+
+    .back-button
+      color white
+```
+
+```css
+.tqb-dp-header {
+  height: 2.5rem;
+}
+.tqb-dp-header .tqb-dp-back-button {
+  color: white;
+}
+```
+
+适用场景：独立组件
 
 <!-- page -->
 
@@ -457,11 +499,73 @@ form input[type=button] {
 1. Nib 是 Stylus 样式库，用于将样式进行兼容性处理
 2. 类似 Compass
 
+<!-- section -->
+
+### 渐变色
+
+```stylus
+@import 'nib'
+
+body
+  background linear-gradient(top, white, black)
+```
+
+编译为：
+
+```css
+body {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #000));
+  background: -webkit-linear-gradient(top, #fff 0%, #000 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #000 100%);
+  background: linear-gradient(top, #fff 0%, #000 100%);
+}
+```
+
+<!-- section -->
+
+### position
+
+```stylus
+#back-to-top
+  fixed bottom right
+```
+
+编译为
+
+```css
+#back-to-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+```
+
 <!-- page -->
 
 ## CSS 小技巧
 
-* [固定比例的容器](https://www.catswhocode.com/blog/advanced-css-tricks-and-techniques)
+<!-- page -->
+
+### 固定比例的容器
+
+```stylus
+.intrinsic-ratio-box
+  height 0
+  padding-bottom 20%
+  position relative
+
+  div
+    absolute top left
+    width 100%
+    height 100%
+```
+
+<!-- page -->
+
+## 一些实践经验
+
+1. 变量前加 `$`，如 `$border-color`
+2. 少用 `@extend`，多用 mixin
 
 <!-- page -->
 
