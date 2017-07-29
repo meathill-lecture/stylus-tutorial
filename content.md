@@ -64,6 +64,10 @@ Stylus 详解
 4. 提前使用新功能
 4. 提供其它语法糖
 
+<!-- section -->
+
+总之，CSS 预处理工具的目的是提高 CSS 的开发效率。
+
 <!-- page -->
 
 ## 为什么选择 Stylus？
@@ -241,11 +245,9 @@ stylus [options] [文件|目录...] -o css/
 * **-i, --interactive**  启动一个交互工具
 * **-U, --inline**  把图片转换成 Data URI
 * **-w, --watch**  监测文件状态，自动重编译
-* **-o, --out**  输出文件地址
 * **-c, --compress**  压缩输出的 CSS
 * **-m, --sourcemap**  生成 SourceMap
 * **--include-css**  输出文件中包含 `@import` 导入的 CSS
-* **-r, --resolve-url**  处理 `url()` 里的路径
 
 <!-- page -->
 
@@ -258,6 +260,18 @@ stylus [options] [文件|目录...] -o css/
 ## Stylus 进阶
 
 <!-- page -->
+
+### 日常
+
+`package.json`
+
+```json
+{
+  "scripts": {
+    "stylus": "mkdir css & stylus -m -w styl/screen.styl -o css/"
+  }
+}
+```
 
 ### Gulp
 
@@ -342,6 +356,7 @@ p {
   height 80px
   margin-left -(@width / 2)
   margin-top -(@height / 2)
+  margin (-@height / 2) 0 0 (-@width / 2)
 ```
 
 <!-- page -->
@@ -376,7 +391,6 @@ for n in (0..6)
   sunday = 9 - n
 
   &.empty-{n}
-    counter-reset date
     flex n n 14.285714%*n
     min-width 14.285714%*n
     max-width 100%
@@ -388,7 +402,7 @@ for n in (0..6)
 
 <!-- section -->
 
-适用场景：[spinkit](https://codepen.io/meathill/pen/xLwQaX?editors=0100)
+适用场景：[spin](https://codepen.io/meathill/pen/xLwQaX?editors=0100)
 
 ```stylus
 .bar
@@ -554,7 +568,7 @@ body {
   padding-bottom 20%
   position relative
 
-  div
+  .real-container
     absolute top left
     width 100%
     height 100%
