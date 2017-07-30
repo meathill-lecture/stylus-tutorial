@@ -417,6 +417,28 @@ for n in (0..6)
 
 <!-- page -->
 
+### 条件判断 `if/else`
+
+```stylus
+$need-support-ie = true
+
+body
+  if $need-support-ie
+    padding 5px
+  else
+    margin 5px
+```
+
+编译为
+
+```css
+body {
+  padding: 5px;
+}
+```
+
+<!-- page -->
+
 ### Mixin & Functions
 
 ```stylus
@@ -439,6 +461,10 @@ form input[type=button] {
   border-radius: 5px;
 }
 ```
+
+<!-- page -->
+
+实例：开发过渡效果墙
 
 <!-- page -->
 

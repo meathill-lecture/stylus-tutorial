@@ -4,7 +4,7 @@
   "description": "a full tutorial of stylus",
   "scripts": {
     "start": "node live-server.js",
-    "watch:stylus": "mkdir css & stylus -m -w styl/screen.styl -o css/",
+    "stylus": "mkdir css & stylus -m -w styl/ -o css/",
     "webpack": "webpack"
   },
   "author": {
