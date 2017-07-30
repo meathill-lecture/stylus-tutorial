@@ -462,9 +462,41 @@ form input[type=button] {
 }
 ```
 
+<!-- section -->
+
+### 全部参数 `args...`
+
+```stylus
+box-shadow(args...)
+   -webkit-box-shadow args
+   -moz-box-shadow args
+   box-shadow args
+
+ #login
+   box-shadow 1px 2px 5px #eee
+```
+
+编译为：
+
+```css
+#login {
+  -webkit-box-shadow: 1px 2px 5px #eee;
+  -moz-box-shadow: 1px 2px 5px #eee;
+  box-shadow: 1px 2px 5px #eee;
+}
+```
+
 <!-- page -->
 
 实例：开发过渡效果墙
+
+<!-- section -->
+
+我的观点：
+
+1. 预处理工具是必须的
+2. 预处理工具只能锦上添花，CSS 更重要
+3. 学会学习，学会积累
 
 <!-- page -->
 
@@ -530,7 +562,7 @@ background: embedurl('logo.svg', 'utf8')
 
 <!-- page -->
 
-## Stylus 生态
+## 生态
 
 <!-- page -->
 
@@ -582,6 +614,41 @@ body {
 
 <!-- page -->
 
+### [animate.css](https://daneden.github.io/animate.css/)
+
+1. 动画库
+2. 可以和 Vue 连用
+
+<!-- page -->
+
+### [Magic animation](https://www.minimamente.com/example/magic_animations/)
+
+1. 动画库
+2. 可以和 Vue 连用
+
+<!-- page -->
+
+### [列表动画](http://ademilter.com/lab/liffect/)
+
+1. 动画生成器
+2. 需要自己集成到项目里
+
+<!-- page -->
+
+### [页面切换动画]（https://tympanus.net/Development/PageTransitions/）
+
+1. 动画库
+2. 可以和 Vue 连用
+
+<!-- page -->
+
+### [CSS 形状](https://css-tricks.com/examples/ShapesOfCSS/)
+
+1. CSS 资源
+2. 你可以把它转换成 Stylus 库
+
+<!-- page -->
+
 ## CSS 小技巧
 
 <!-- page -->
@@ -602,10 +669,29 @@ body {
 
 <!-- page -->
 
+### 视觉上不可见
+
+屏幕上不可见，但对搜索引擎和阅读器可见。
+
+```stylus
+.visually-hidden
+  border 0
+  clip rect(0,0,0,0)
+  position absolute
+  width 1px
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+```
+
+<!-- page -->
+
 ## 一些实践经验
 
 1. 变量前加 `$`，如 `$border-color`
 2. 少用 `@extend`，多用 mixin
+3. 平时注意积累，无论是库、插件、还是代码片段
 
 <!-- page -->
 

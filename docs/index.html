@@ -18,7 +18,7 @@
 <body>
 <div class="reveal">
   <div class="slides">
-    <section><h4 id="css-">CSS 预处理工具</h4><h1 id="stylus-">Stylus 详解</h1><h4 id="-meathill-https-weibo-com-meathill-"><a href="https://weibo.com/meathill/">@meathill</a></h4></section><section><section><h2>关于作者</h2></section><section><p><img src="http://qiniu.meathill.com/wp-content/uploads/2016/07/20160607_005422423_iOS-825x510.jpg" height="400" class="author-avatar"></p><p>大家好，我是翟路佳。全栈工程师，编程爱好者，喜欢分享。</p></section><section><p>我今年的首要目标是成为一名合格的讲师，帮助尽可能多的同学获得进步。</p><p>经常出没于：</p><ul><li><a href="http://blog.meathill.com">博客：http://blog.meathill.com</a></li><li><a href="http://weibo.com/meathill">微博：https://weibo.com/meathill/</a></li><li><a href="https://github.com/meathill-lecture">我的其它分享 https://github.com/meathill-lecture</a></li></ul></section></section><section><h2 id="-">教学目标</h2><ol><li>了解使用预处理工具的必要性</li><li>了解选择 Stylus 的原因</li><li>学会 Stylus 的常见用法</li><li>学会一些日常用法</li></ol></section><section><h2 id="-">课程大纲</h2><ol><li>什么是 CSS 预处理？</li><li>为什么选择 Stylus？</li><li>Stylus 入门</li><li>Stylus 进阶</li><li>Stylus 生态</li></ol></section><section><h2 id="-css-">什么是 CSS 预处理</h2></section><section><h3 id="css-">CSS 五大里程碑</h3><ol><li>Firebug</li><li>Chrome</li><li>CSS3</li><li><strong>预处理</strong></li><li>Flexbox &amp; Grid</li></ol></section><section><h3 id="css-">CSS 开发的问题</h3><ol><li>缺少可编程性</li><li>浏览器存在兼容性差异</li></ol></section><section><h3 id="-">预处理器的目标</h3><ol><li>增加逻辑、循环、函数，提高复用性</li><li>增加编译打包，提供模块管理</li><li>自动多平台处理</li><li>提前使用新功能</li><li>提供其它语法糖</li></ol></section><section><h2 id="-stylus-">为什么选择 Stylus？</h2></section><section><h3 id="-">常见预处理工具</h3><ol><li>LESS</li><li>SASS + Compass</li><li>Stylus</li><li>PostCSS</li></ol></section><section><section><p>对战开始！</p></section><section><h3 id="round-1-sass-vs-less">Round 1: Sass vs LESS</h3><h3 id="-sass">胜利者：Sass</h3></section><section><h3 id="round-2-sass-vs-stylus">Round 2: Sass vs Stylus</h3><h3 id="-stylus">胜利者：Stylus</h3></section></section><section><section><h3 id="round-3-stylus-vs-postcss">Round 3: Stylus vs PostCSS</h3><h3 id="-">势均力敌</h3><ol><li>都用 JS 实现</li><li>都支持扩展</li></ol></section><section><p>Stylus 的优势：</p><ol><li>语法上，无限接近 JS</li><li>极尽简化，又向上兼容</li><li>强力的 <code>@extend</code></li></ol></section><section><p>PostCSS 的优势：</p><ol><li>速度快</li><li>可配置，插件丰富</li><li>语法完全等同 CSS</li></ol></section><section><p>我选择 Stylus 的原因：</p><ol><li>语法简单</li><li>功能够用，不需要复杂的配置</li></ol></section></section><section><h2 id="stylus-">Stylus 入门</h2></section><section><pre><code class="lang-stylus">body
+    <section><h4 id="css-">CSS 预处理工具</h4><h1 id="stylus-">Stylus 详解</h1><h4 id="-meathill-https-weibo-com-meathill-"><a href="https://weibo.com/meathill/">@meathill</a></h4></section><section><section><h2>关于作者</h2></section><section><p><img src="http://qiniu.meathill.com/wp-content/uploads/2016/07/20160607_005422423_iOS-825x510.jpg" height="400" class="author-avatar"></p><p>大家好，我是翟路佳。全栈工程师，编程爱好者，喜欢分享。</p></section><section><p>我今年的首要目标是成为一名合格的讲师，帮助尽可能多的同学获得进步。</p><p>经常出没于：</p><ul><li><a href="http://blog.meathill.com">博客：http://blog.meathill.com</a></li><li><a href="http://weibo.com/meathill">微博：https://weibo.com/meathill/</a></li><li><a href="https://github.com/meathill-lecture">我的其它分享 https://github.com/meathill-lecture</a></li></ul></section></section><section><h2 id="-">教学目标</h2><ol><li>了解使用预处理工具的必要性</li><li>了解选择 Stylus 的原因</li><li>学会 Stylus 的常见用法</li><li>学会一些日常用法</li></ol></section><section><h2 id="-">课程大纲</h2><ol><li>什么是 CSS 预处理？</li><li>为什么选择 Stylus？</li><li>Stylus 入门</li><li>Stylus 进阶</li><li>Stylus 生态</li></ol></section><section><h2 id="-css-">什么是 CSS 预处理</h2></section><section><h3 id="css-">CSS 五大里程碑</h3><ol><li>Firebug</li><li>Chrome</li><li>CSS3</li><li><strong>预处理</strong></li><li>Flexbox &amp; Grid</li></ol></section><section><h3 id="css-">CSS 开发的问题</h3><ol><li>缺少可编程性</li><li>浏览器存在兼容性差异</li></ol></section><section><section><h3 id="-">预处理器的目标</h3><ol><li>增加逻辑、循环、函数，提高复用性</li><li>增加编译打包，提供模块管理</li><li>自动多平台处理</li><li>提前使用新功能</li><li>提供其它语法糖</li></ol></section><section><p>总之，CSS 预处理工具的目的是提高 CSS 的开发效率。</p></section></section><section><h2 id="-stylus-">为什么选择 Stylus？</h2></section><section><h3 id="-">常见预处理工具</h3><ol><li>LESS</li><li>SASS + Compass</li><li>Stylus</li><li>PostCSS</li></ol></section><section><section><p>对战开始！</p></section><section><h3 id="round-1-sass-vs-less">Round 1: Sass vs LESS</h3><h3 id="-sass">胜利者：Sass</h3></section><section><h3 id="round-2-sass-vs-stylus">Round 2: Sass vs Stylus</h3><h3 id="-stylus">胜利者：Stylus</h3></section></section><section><section><h3 id="round-3-stylus-vs-postcss">Round 3: Stylus vs PostCSS</h3><h3 id="-">势均力敌</h3><ol><li>都用 JS 实现</li><li>都支持扩展</li></ol></section><section><p>Stylus 的优势：</p><ol><li>语法上，无限接近 JS</li><li>极尽简化，又向上兼容</li><li>强力的 <code>@extend</code></li></ol></section><section><p>PostCSS 的优势：</p><ol><li>速度快</li><li>可配置，插件丰富</li><li>语法完全等同 CSS</li></ol></section><section><p>我选择 Stylus 的原因：</p><ol><li>语法简单</li><li>功能够用，不需要复杂的配置</li></ol></section></section><section><h2 id="stylus-">Stylus 入门</h2></section><section><pre><code class="lang-stylus">body
   font 12px Helvetica, Arial, sans-serif
 
 a.button
@@ -60,7 +60,12 @@ body
 }
 </code></pre></section><section><section><h3 id="-">命令行工具</h3><p>安装</p><pre><code class="lang-bash">npm install stylus -g
 </code></pre><p>使用</p><pre><code class="lang-bash">stylus [options] [文件|目录...] -o css/
-</code></pre></section><section><p>常用 options</p><ul><li><strong>-i, --interactive</strong> 启动一个交互工具</li><li><strong>-U, --inline</strong> 把图片转换成 Data URI</li><li><strong>-w, --watch</strong> 监测文件状态，自动重编译</li><li><strong>-o, --out</strong> 输出文件地址</li><li><strong>-c, --compress</strong> 压缩输出的 CSS</li><li><strong>-m, --sourcemap</strong> 生成 SourceMap</li><li><strong>--include-css</strong> 输出文件中包含 <code>@import</code> 导入的 CSS</li><li><strong>-r, --resolve-url</strong> 处理 <code>url()</code> 里的路径</li></ul></section></section><section><h3 id="-">游乐场</h3><ul><li><a href="http://stylus-lang.com/try.html#?code=body%20%7B%0A%20%20font%3A%2014px%2F1.5%20Helvetica%2C%20arial%2C%20sans-serif%3B%0A%20%20%23logo%20%7B%0A%20%20%20%20border-radius%3A%205px%3B%0A%20%20%7D%0A%7D">官方游乐场</a></li></ul></section><section><h2 id="stylus-">Stylus 进阶</h2></section><section><h3 id="gulp">Gulp</h3><pre><code class="lang-bash">npm i gulp-stylus gulp-clean-css -D
+</code></pre></section><section><p>常用 options</p><ul><li><strong>-i, --interactive</strong> 启动一个交互工具</li><li><strong>-U, --inline</strong> 把图片转换成 Data URI</li><li><strong>-w, --watch</strong> 监测文件状态，自动重编译</li><li><strong>-c, --compress</strong> 压缩输出的 CSS</li><li><strong>-m, --sourcemap</strong> 生成 SourceMap</li><li><strong>--include-css</strong> 输出文件中包含 <code>@import</code> 导入的 CSS</li></ul></section></section><section><h3 id="-">游乐场</h3><ul><li><a href="http://stylus-lang.com/try.html#?code=body%20%7B%0A%20%20font%3A%2014px%2F1.5%20Helvetica%2C%20arial%2C%20sans-serif%3B%0A%20%20%23logo%20%7B%0A%20%20%20%20border-radius%3A%205px%3B%0A%20%20%7D%0A%7D">官方游乐场</a></li></ul></section><section><h2 id="stylus-">Stylus 进阶</h2></section><section><h3 id="-">日常</h3><p><code>package.json</code></p><pre><code class="lang-json">{
+  &quot;scripts&quot;: {
+    &quot;stylus&quot;: &quot;mkdir css &amp; stylus -m -w styl/screen.styl -o css/&quot;
+  }
+}
+</code></pre><h3 id="gulp">Gulp</h3><pre><code class="lang-bash">npm i gulp-stylus gulp-clean-css -D
 </code></pre><p>gulpfile.js</p><pre><code class="lang-javascript">gulp.task(&#39;stylus&#39;, () =&gt; {
   return gulp.src(&#39;./styl/screen.styl&#39;)
     .pipe(stylus({
@@ -102,6 +107,7 @@ body
   height 80px
   margin-left -(@width / 2)
   margin-top -(@height / 2)
+  margin (-@height / 2) 0 0 (-@width / 2)
 </code></pre></section></section><section><section><h3 id="-">循环</h3><pre><code class="lang-stylus">for n in 1..10
   .col-{n}
     width 10% * n
@@ -117,7 +123,6 @@ body
   sunday = 9 - n
 
   &amp;.empty-{n}
-    counter-reset date
     flex n n 14.285714%*n
     min-width 14.285714%*n
     max-width 100%
@@ -125,13 +130,23 @@ body
     ~ :nth-child(7n + {saturday}),
     ~ :nth-child(7n + {sunday})
       color orange
-</code></pre></section><section><p>适用场景：<a href="https://codepen.io/meathill/pen/xLwQaX?editors=0100">spinkit</a></p><pre><code class="lang-stylus">.bar
+</code></pre></section><section><p>适用场景：<a href="https://codepen.io/meathill/pen/xLwQaX?editors=0100">spin</a></p><pre><code class="lang-stylus">.bar
   animation shousuo 1s ease-in-out infinite
 
   for n in 1..5
     &amp;:nth-child({n})
       animation-delay .1s * n
-</code></pre><p>其它 <a href="http://tobiasahlin.com/spinkit/">spinkit</a></p></section></section><section><h3 id="mixin-functions">Mixin &amp; Functions</h3><pre><code class="lang-stylus">border-radius(n)
+</code></pre><p>其它 <a href="http://tobiasahlin.com/spinkit/">spinkit</a></p></section></section><section><h3 id="-if-else-">条件判断 <code>if/else</code></h3><pre><code class="lang-stylus">$need-support-ie = true
+
+body
+  if $need-support-ie
+    padding 5px
+  else
+    margin 5px
+</code></pre><p>编译为</p><pre><code class="lang-css">body {
+  padding: 5px;
+}
+</code></pre></section><section><section><h3 id="mixin-functions">Mixin &amp; Functions</h3><pre><code class="lang-stylus">border-radius(n)
   -webkit-border-radius n
   -moz-border-radius n
   border-radius n
@@ -144,7 +159,19 @@ form input[type=button]
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-</code></pre></section><section><section><h3 id="-">内建函数</h3><ul><li>颜色函数，如<code>darken</code>/<code>lighten</code></li><li>嵌入图片 <code>embedurl</code></li><li>添加前缀 <code>+prefix-classes(prefix)</code></li></ul></section><section><h3 id="-">颜色函数</h3><pre><code class="lang-stylus">.btn-primary
+</code></pre></section><section><h3 id="-args-">全部参数 <code>args...</code></h3><pre><code class="lang-stylus">box-shadow(args...)
+   -webkit-box-shadow args
+   -moz-box-shadow args
+   box-shadow args
+
+ #login
+   box-shadow 1px 2px 5px #eee
+</code></pre><p>编译为：</p><pre><code class="lang-css">#login {
+  -webkit-box-shadow: 1px 2px 5px #eee;
+  -moz-box-shadow: 1px 2px 5px #eee;
+  box-shadow: 1px 2px 5px #eee;
+}
+</code></pre></section></section><section><section><p>实例：开发过渡效果墙</p></section><section><p>我的观点：</p><ol><li>预处理工具是必须的</li><li>预处理工具只能锦上添花，CSS 更重要</li><li>学会学习，学会积累</li></ol></section></section><section><section><h3 id="-">内建函数</h3><ul><li>颜色函数，如<code>darken</code>/<code>lighten</code></li><li>嵌入图片 <code>embedurl</code></li><li>添加前缀 <code>+prefix-classes(prefix)</code></li></ul></section><section><h3 id="-">颜色函数</h3><pre><code class="lang-stylus">.btn-primary
   background-color $primary-color
   border-color darken($primary-color, 15%)
 
@@ -170,7 +197,7 @@ background: embedurl(&#39;logo.svg&#39;, &#39;utf8&#39;)
 .tqb-dp-header .tqb-dp-back-button {
   color: white;
 }
-</code></pre><p>适用场景：独立组件</p></section></section><section><h2 id="stylus-">Stylus 生态</h2></section><section><section><h3 id="-nib-http-tj-github-io-nib-"><a href="http://tj.github.io/nib/">Nib</a></h3><ol><li>Nib 是 Stylus 样式库，用于将样式进行兼容性处理</li><li>类似 Compass</li></ol></section><section><h3 id="-">渐变色</h3><pre><code class="lang-stylus">@import &#39;nib&#39;
+</code></pre><p>适用场景：独立组件</p></section></section><section><h2 id="-">生态</h2></section><section><section><h3 id="-nib-http-tj-github-io-nib-"><a href="http://tj.github.io/nib/">Nib</a></h3><ol><li>Nib 是 Stylus 样式库，用于将样式进行兼容性处理</li><li>类似 Compass</li></ol></section><section><h3 id="-">渐变色</h3><pre><code class="lang-stylus">@import &#39;nib&#39;
 
 body
   background linear-gradient(top, white, black)
@@ -187,16 +214,25 @@ body
   right: 0;
   bottom: 0;
 }
-</code></pre></section></section><section><h2 id="css-">CSS 小技巧</h2></section><section><h3 id="-">固定比例的容器</h3><pre><code class="lang-stylus">.intrinsic-ratio-box
+</code></pre></section></section><section><h3 id="-animate-css-https-daneden-github-io-animate-css-"><a href="https://daneden.github.io/animate.css/">animate.css</a></h3><ol><li>动画库</li><li>可以和 Vue 连用</li></ol></section><section><h3 id="-magic-animation-https-www-minimamente-com-example-magic_animations-"><a href="https://www.minimamente.com/example/magic_animations/">Magic animation</a></h3><ol><li>动画库</li><li>可以和 Vue 连用</li></ol></section><section><h3 id="-http-ademilter-com-lab-liffect-"><a href="http://ademilter.com/lab/liffect/">列表动画</a></h3><ol><li>动画生成器</li><li>需要自己集成到项目里</li></ol></section><section><h3 id="-https-tympanus-net-development-pagetransitions-">[页面切换动画]（<a href="https://tympanus.net/Development/PageTransitions/）">https://tympanus.net/Development/PageTransitions/）</a></h3><ol><li>动画库</li><li>可以和 Vue 连用</li></ol></section><section><h3 id="-css-https-css-tricks-com-examples-shapesofcss-"><a href="https://css-tricks.com/examples/ShapesOfCSS/">CSS 形状</a></h3><ol><li>CSS 资源</li><li>你可以把它转换成 Stylus 库</li></ol></section><section><h2 id="css-">CSS 小技巧</h2></section><section><h3 id="-">固定比例的容器</h3><pre><code class="lang-stylus">.intrinsic-ratio-box
   height 0
   padding-bottom 20%
   position relative
 
-  div
+  .real-container
     absolute top left
     width 100%
     height 100%
-</code></pre></section><section><h2 id="-">一些实践经验</h2><ol><li>变量前加 <code>$</code>，如 <code>$border-color</code></li><li>少用 <code>@extend</code>，多用 mixin</li></ol></section><section><p>Q&amp;A</p></section><section><p>参考阅读：</p><ul><li><a href="http://stylus-lang.com/">Stylus 官方文档</a></li><li><a href="https://css-tricks.com/sass-vs-less/">Sass vs LESS</a></li><li><a href="https://www.slant.co/versus/762/767/~stylus_vs_postcss">Stylus vs PostCSS</a></li></ul></section>
+</code></pre></section><section><h3 id="-">视觉上不可见</h3><p>屏幕上不可见，但对搜索引擎和阅读器可见。</p><pre><code class="lang-stylus">.visually-hidden
+  border 0
+  clip rect(0,0,0,0)
+  position absolute
+  width 1px
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+</code></pre></section><section><h2 id="-">一些实践经验</h2><ol><li>变量前加 <code>$</code>，如 <code>$border-color</code></li><li>少用 <code>@extend</code>，多用 mixin</li><li>平时注意积累，无论是库、插件、还是代码片段</li></ol></section><section><p>Q&amp;A</p></section><section><p>参考阅读：</p><ul><li><a href="http://stylus-lang.com/">Stylus 官方文档</a></li><li><a href="https://css-tricks.com/sass-vs-less/">Sass vs LESS</a></li><li><a href="https://www.slant.co/versus/762/767/~stylus_vs_postcss">Stylus vs PostCSS</a></li></ul></section>
   </div>
 </div>
 <aside id="sf-aside" class="reveal-aside">
