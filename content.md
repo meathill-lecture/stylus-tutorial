@@ -692,6 +692,7 @@ body {
 1. 变量前加 `$`，如 `$border-color`
 2. 少用 `@extend`，多用 mixin
 3. 平时注意积累，无论是库、插件、还是代码片段
+4. 适当分文件，组织代码 [例子](https://github.com/meathill/Meart/tree/master/styl)
 
 <!-- page -->
 
