@@ -273,6 +273,8 @@ stylus [options] [文件|目录...] -o css/
 }
 ```
 
+<!-- page -->
+
 ### Gulp
 
 ```bash
@@ -635,7 +637,7 @@ body {
 
 <!-- page -->
 
-### [页面切换动画]（https://tympanus.net/Development/PageTransitions/）
+### [页面切换动画](https://tympanus.net/Development/PageTransitions/)
 
 1. 动画库
 2. 可以和 Vue 连用
