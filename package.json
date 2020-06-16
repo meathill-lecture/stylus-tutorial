@@ -19,29 +19,21 @@
   "homepage": "https://meathill-lecture.github.io/",
   "license": "(CC-BY-NC-ND-4.0 OR MIT)",
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.7.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "live-server": "^1.2.0",
-    "marked": "^0.3.6",
-    "reveal-markdown-compiler": "^1.2.0",
-    "run-sequence": "^1.2.2",
-    "webpack": "^3.3.0",
-    "webpack-stream": "^3.2.0"
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "marked": "^1.1.0",
+    "reveal-markdown-compiler": "^2.2.6",
+    "webpack": "^4.43.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.1.0",
     "meathill-reveal-theme": "^0.2.2",
-    "reveal.js": "^3.5.0",
-    "spinkit": "^1.2.5"
+    "reveal.js": "^4.0.2",
+    "spinkit": "^2.0.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
