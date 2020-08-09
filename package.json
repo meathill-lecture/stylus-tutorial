@@ -19,21 +19,21 @@
   "homepage": "https://meathill-lecture.github.io/",
   "license": "(CC-BY-NC-ND-4.0 OR MIT)",
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "babel-loader": "^8.1.0",
-    "marked": "^1.1.0",
+    "marked": "^1.1.1",
     "reveal-markdown-compiler": "^2.2.6",
-    "webpack": "^4.43.0"
+    "webpack": "^4.44.1"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
-    "highlight.js": "^10.1.0",
+    "highlight.js": "^10.1.2",
     "meathill-reveal-theme": "^0.2.2",
     "reveal.js": "^4.0.2",
     "spinkit": "^2.0.1",
-    "webpack-cli": "^3.3.11",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
 }
